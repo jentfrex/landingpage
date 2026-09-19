@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jentfrex - Custom Landing Pages & Affiliate Architecture</title>
+    <!-- Linked External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="liquid-glass-canvas"></canvas>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            Jentfrex<span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#ecosystem">Overview</a></li>
+            <li><a href="#features">Services</a></li>
+            <li><a href="#inquiry">Submit Project</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="btn btn-primary" onclick="document.getElementById('inquiry').scrollIntoView({ behavior: 'smooth' })">Get Started</button>
+        </div>
+    </header>
+
+    <div class="wrapper" id="ecosystem">
+        
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <span id="displayTag" class="tag">Custom Landing Pages & Affiliate Architecture</span>
+                <h1 id="displayTitle">Want to Start Affiliate Marketing But Have No Landing Page? Let Jentfrex Build It For You.</h1>
+                <p id="displayDesc">If you have a business plan or want to venture into affiliate marketing but need a high-converting landing page, submit your project details and let's get started under a formal contract.</p>
+                
+                <ul class="check-list">
+                    <li><span>✓</span> Custom contract-based landing pages & sales funnels</li>
+                    <li><span>✓</span> Tailored specifically to your business plan and strategy</li>
+                    <li><span>✓</span> Professional design optimized for high conversion rates</li>
+                </ul>
+
+                <div class="hero-cta-group">
+                    <button class="btn btn-primary" style="padding: 14px 28px; font-size: 15px;" onclick="document.getElementById('inquiry').scrollIntoView({ behavior: 'smooth' })">Submit Your Details</button>
+                    <button class="btn" style="padding: 14px 28px; font-size: 15px;" onclick="document.getElementById('features').scrollIntoView({ behavior: 'smooth' })">View Process</button>
+                </div>
+                <div class="guarantee">🔒 Secure Contract Workflow • Direct Communication</div>
+            </div>
+
+            <!-- Golden Amber Liquid Frame Design -->
+            <div class="hero-visual">
+                <img id="displayImg" src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=85" alt="Platform Mockup">
+            </div>
+        </section>
+
+        <!-- SOCIAL PROOF SECTION -->
+        <div class="social-proof-banner">
+            <div>
+                <span style="font-size: 16px; margin-right: 10px; color: var(--text-main);">Professional Service</span>
+                <span class="trust-stars">★★★★★</span>
+            </div>
+            <div style="color: var(--text-muted); font-size: 14px;">
+                <strong style="color: var(--text-main);">Ready to handle</strong> your <span style="color: #ffaa00; font-weight: bold;">Affiliate Landing Page Plans</span>
+            </div>
+        </div>
+
+        <section class="features-section" id="features">
+    <div class="features-header">
+        <h2>How We Work Together</h2>
+        <p>Simple, seamless, and directly focused on executing your project plan.</p>
+    </div>
+
+    <div class="process-cards-container">
+        <div class="process-card">
+            <div class="process-card-header">
+                <span class="step-badge">01</span>
+                <h3>Share Your Plan & Requirements</h3>
+            </div>
+            <div class="process-card-body">
+                Fill out the form below with your name, contact info, and exact details regarding the landing page or affiliate setup you need built.
+            </div>
+        </div>
+
+        <div class="process-card">
+            <div class="process-card-header">
+                <span class="step-badge">02</span>
+                <h3>Formal Contract & Agreement</h3>
+            </div>
+            <div class="process-card-body">
+                We review your requirements and finalize the scope of work through a clear contract to ensure smooth project execution.
+            </div>
+        </div>
+
+        <div class="process-card">
+            <div class="process-card-header">
+                <span class="step-badge">03</span>
+                <h3>Build & Launch Your System</h3>
+            </div>
+            <div class="process-card-body">
+                Once aligned, I will develop your high-converting landing page so you can immediately use it for your affiliate promotions and clients.
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- INQUIRY FORM SECTION -->
+        <section class="inquiry-section" id="inquiry">
+            <h2>Submit Your Project Plan & Details</h2>
+            <p class="subtitle">Fill out this form to send your project specifications directly to my inbox for contract review.</p>
+            
+            <form id="clientProjectForm" action="https://formspree.io/f/moeqoykd" method="POST" onsubmit="submitClientInquiry(event)">
+                <div class="client-form-grid">
+                    <div class="client-form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="name" id="clientName" placeholder="e.g. John Doe" required>
+                    </div>
+
+                    <div class="client-form-group">
+                        <label>Contact Details (Email / Phone / Messenger)</label>
+                        <input type="text" name="contact" id="clientContact" placeholder="e.g. email@gmail.com or FB Profile Link" required>
+                    </div>
+
+                    <div class="client-form-group full">
+                        <label>Select Project Type</label>
+                        <select name="projectType" id="clientProjectType" required>
+                            <option value="">-- Choose your requirement --</option>
+                            <option value="Affiliate Landing Page Setup">Affiliate Landing Page Setup (New to affiliate, need landing page)</option>
+                            <option value="Custom E-Commerce / Storefront">Custom E-Commerce / Storefront Landing Page</option>
+                            <option value="Digital Marketing / Lead Capture Funnel">Digital Marketing / Lead Capture Funnel</option>
+                            <option value="Other Custom Project">Other Custom Project (Specify below)</option>
+                        </select>
+                    </div>
+
+                    <div class="client-form-group full">
+                        <label>Describe Your Plan / What You Want Me to Build</label>
+                        <textarea name="details" id="clientDetails" rows="4" placeholder="Enter your full plan, ideas, or the specific features you want included in your landing page..." required></textarea>
+                    </div>
+                </div>
+
+                <div style="margin-top: 30px; text-align: center;">
+                    <button type="submit" class="btn btn-primary" style="padding: 15px 35px; font-size: 16px;">Submit Project Details & Contract Request</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- ADMIN CMS PANEL -->
+        <div id="adminPanel">
+            <h3>🛠️ Content Management System (Admin Control)</h3>
+            <p style="font-size: 13px; color: var(--text-muted);">Edit the fields below and click "Save Changes" to update the live frontend instantly.</p>
+            
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Badge Tag Text</label>
+                    <input type="text" id="inputTag" value="Custom Landing Pages & Affiliate Architecture">
+                </div>
+
+                <div class="form-group">
+                    <label>Hero Title</label>
+                    <input type="text" id="inputTitle" value="Want to Start Affiliate Marketing But Have No Landing Page? Let Jentfrex Build It For You.">
+                </div>
+
+                <div class="form-group full">
+                    <label>Hero Description</label>
+                    <textarea id="inputDesc" rows="3">If you have a business plan or want to venture into affiliate marketing but need a high-converting landing page, submit your project details and let's get started under a formal contract.</textarea>
+                </div>
+
+                <div class="form-group full">
+                    <label>Upload Hero Image From Computer</label>
+                    <input type="file" id="imageInput" accept="image/*">
+                </div>
+            </div>
+
+            <div style="margin-top: 25px; display: flex; gap: 15px;">
+                <button class="btn btn-primary" onclick="saveContent()">💾 Save & Update Frontend Live</button>
+                <button class="btn" onclick="toggleAdminPanel()">Close Panel</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer Branding -->
+    <footer style="background: var(--surface); border-top: 1px solid var(--border); padding: 50px 20px 30px 20px; margin-top: 60px;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; text-align: left;">
+            <div style="flex: 1; min-width: 250px;">
+                <div class="logo" style="margin-bottom: 12px; display: inline-flex;">
+                    Jentfrex<span></span>
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">
+                    Custom landing pages and affiliate marketing architecture managed by <strong>jentfrex</strong>.
+                </p>
+            </div>
+            <div style="flex: 1; min-width: 160px;">
+                <h4 style="font-size: 14px; color: var(--text-main); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;">Navigation</h4>
+                <ul style="list-style: none; font-size: 13px; line-height: 2;">
+                    <li><a href="#ecosystem" style="color: var(--text-muted); text-decoration: none;">Overview</a></li>
+                    <li><a href="#features" style="color: var(--text-muted); text-decoration: none;">Services</a></li>
+                    <li><a href="#inquiry" style="color: var(--text-muted); text-decoration: none;">Submit Project</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; min-width: 160px;">
+                <h4 style="font-size: 14px; color: var(--text-main); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px;">Legal & Security</h4>
+                <ul style="list-style: none; font-size: 13px; line-height: 2;">
+                    <li><a href="privacy.html" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a></li>
+                    <li><a href="terms.html" style="color: var(--text-muted); text-decoration: none;">Terms of Agreement</a></li>
+                    <li><a href="disclaimer.html" style="color: var(--text-muted); text-decoration: none;">Affiliate Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="max-width: 1200px; margin: 40px auto 0 auto; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; font-size: 13px; color: var(--text-muted);">
+            <p>&copy; 2026 Jentfrex &bull; Managed by <strong>jentfrex</strong> &bull; All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Scripts -->
+    <script src="script.js"></script>
