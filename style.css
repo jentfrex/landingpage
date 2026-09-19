@@ -590,11 +590,19 @@ header .header-right, .nav-right {
     border-radius: 6px;
 }
 
-/* ==========================================================
    ULTIMATE BULLETPROOF MOBILE HERO & IMAGE FIX
    ========================================================== */
 
+/* ==========================================================
+   I-HIDE ANG HERO IMAGE SA MOBILE VIEW
+   ========================================================== */
 @media screen and (max-width: 768px) {
+  .hero img, 
+  .hero-image-container, 
+  div[style*="border-radius"] {
+    display: none !important;
+  }
+}
   
   /* 1. I-force ang tibuok hero section ug mga ginikanan niini sa pag-stack */
   .hero, section, .main-hero, header + section {
@@ -661,7 +669,6 @@ header .header-right, .nav-right {
     float: none !important;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
   }
-}
 
 
   /* --- 2. FIX SA FORM (I-stack gyud ang Full Name ug Contact Details) --- */
