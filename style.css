@@ -591,36 +591,45 @@ header .header-right, .nav-right {
 }
 
 /* ==========================================================
-   FINAL HERO IMAGE FIX (Nindot na ang form, sakto na gyud ang hulagway)
+   ULTIMATE HERO IMAGE FIX (PAG-AYO SA NAIPIT NGA HULAGWAY)
    ========================================================== */
 
 @media screen and (max-width: 768px) {
   
-  /* 1. I-balik sa saktong hitsura ang container sa hero image */
-  .hero img, 
-  .hero-image-container img, 
-  div[style*="border-radius"] img {
-    width: 100% !important;
-    max-width: 100% !important; /* Molapad na siya sa mobile screen */
-    height: auto !important;
-    max-height: 400px !important; /* Dili na ma-usab nga pormang pildoras */
-    object-fit: cover !important;
-    display: block !important;
-    margin: 20px auto !important;
-    border-radius: 20px !important;
-  }
-
-  /* 2. Siguraduhon nga ang ginikanan nga div sa hero image dili ma-compress */
-  .hero .col-md-6, 
+  /* 1. I-release ang fixed height ug width sa container sa hulagway sa hero section */
+  div[style*="border-radius"], 
   .hero-image-container, 
-  div[style*="border-radius"] {
+  .profile-container,
+  .col-md-6, 
+  [class*="col-"] {
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
+    min-height: unset !important;
+    max-height: unset !important;
     display: block !important;
+    margin: 15px auto !important;
     padding: 0 !important;
     background: transparent !important;
+    float: none !important;
   }
+
+  /* 2. I-pilit ang mismong img tag nga mobuak sa pormang pildoras ug mahimong saktong hulagway */
+  .hero img, 
+  .hero-image-container img, 
+  div[style*="border-radius"] img,
+  section img {
+    width: 90% !important;
+    max-width: 320px !important;
+    height: auto !important;
+    max-height: 400px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 20px auto !important;
+    border-radius: 20px !important;
+    float: none !important;
+  }
+}
 
 
   /* --- 2. FIX SA FORM (I-stack gyud ang Full Name ug Contact Details) --- */
@@ -649,7 +658,7 @@ header .header-right, .nav-right {
     margin-bottom: 15px !important;
     box-sizing: border-box !important;
   }
-}
+
 
 /* ========================================================
    FIXED PROCESS CARDS & HEADERS STYLING (CSS ONLY)
