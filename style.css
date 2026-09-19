@@ -594,13 +594,13 @@ header .header-right, .nav-right {
    ULTIMATE ABSOLUTE OVERRIDE: HERO IMAGE FIX PARA SA MOBILE
    ========================================================== */
 
-@media screen and (max-width: 768px) {
-  div h2 {
-    animation: guaranteedTextShine 3s linear infinite !important;
-    text-shadow: 0 0 25px rgba(255, 170, 0, 0.5), 0 0 10px rgba(255, 215, 0, 0.3) !important;
-  }
+/* ==========================================================
+   ULTIMATE ABSOLUTE OVERRIDE: HERO IMAGE FIX PARA SA MOBILE
+   ========================================================== */
 
-  /* Ibutang diri ang sakto nga fix para sa hero image nga dili ma-ipit */
+@media screen and (max-width: 768px) {
+  
+  /* 1. I-release ang tanang restrictive width ug height sa container sa hero image */
   div[style*="border-radius"], 
   .hero-image-container, 
   .profile-container,
@@ -611,27 +611,31 @@ header .header-right, .nav-right {
     height: auto !important;
     min-height: unset !important;
     max-height: unset !important;
-    display: block !important;
-    float: none !important;
+    display: flex !important; /* Change to flex aron ma-center */
+    justify-content: center !important;
+    align-items: center !important;
     margin: 20px auto !important;
-    padding: 0 10px !important;
+    padding: 0 !important;
     background: transparent !important;
+    float: none !important;
   }
 
+  /* 2. I-pilit ang mismong img tag nga mobuak sa pormang pildoras ug mahimong saktong hulagway */
   img, 
   .hero img, 
   .hero-image-container img, 
   div[style*="border-radius"] img,
   section img {
     width: 100% !important;
-    max-width: 320px !important;
+    max-width: 320px !important; /* Sakto nga gidak-on sa mobile screen */
     height: auto !important;
     max-height: 450px !important;
-    object-fit: contain !important;
+    object-fit: contain !important; /* Or cover, tan-awa unsa mas nindot */
     display: block !important;
-    margin: 15px auto !important;
-    border-radius: 20px !important;
+    margin: 0 auto !important;
+    border-radius: 15px !important; /* I-adjust ang roundness */
     float: none !important;
+    box-shadow: none !important; /* O ilisan og mobile-friendly shadow */
   }
 }
 
