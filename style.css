@@ -591,39 +591,31 @@ header .header-right, .nav-right {
 }
 
 /* ==========================================================
-   CELINE'S ABSOLUTE HERO OVERRIDE FOR MOBILE
+   CELINE'S TARGETED FORM STACKING FIX (Footer/Form Only)
    ========================================================== */
 
 @media screen and (max-width: 768px) {
-  /* 1. Pugson ang tanang header tags sa hero nga mamahimong sakto sa panan-aw */
-  .hero h1, .hero-title, header h1, section h1, div h1 {
-    font-size: 24px !important;
-    line-height: 1.2 !important;
-    letter-spacing: normal !important;
-    max-width: 100% !important;
-    word-wrap: break-word !important;
-    text-align: center !important;
-  }
-
-  /* 2. Palakkuon ang gamay kaayong hulagway sa hero section */
-  .hero img, .profile-container img, .hero-image img, img[src*="hero"], img.profile {
-    width: 80% !important;
-    max-width: 300px !important;
-    height: auto !important;
-    display: block !important;
-    margin: 20px auto !important;
+  /* I-target lang specifically ang form fields aron mag-stack og patindog */
+  form .form-row, 
+  form .form-group, 
+  form div[style*="flex"], 
+  form div[style*="grid"],
+  .footer-form .row,
+  section#contact form div {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
     float: none !important;
   }
 
-  /* 3. I-center ug i-fix ang padding sa tibuok hero container */
-  .hero, .hero-section, .banner {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    padding: 15px !important;
+  /* Siguraduhon nga ang tanang input, select, ug textarea mo-occupy sa tibuok width */
+  form input, 
+  form select, 
+  form textarea {
     width: 100% !important;
+    max-width: 100% !important;
     box-sizing: border-box !important;
+    margin-bottom: 12px !important;
   }
 }
 
