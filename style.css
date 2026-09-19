@@ -591,20 +591,23 @@ header .header-right, .nav-right {
 }
 
 @media (max-width: 768px) {
-  /* I-isa-isa ang pagpahimutang sa form fields aron dili mag-side-by-side */
-  form .form-group, 
-  .form-row, 
-  .input-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  /* Pakub-an ang dako kaayong text aron dili mo-overflow */
+  h1, .hero-title, .main-title {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
   }
 
-  /* Siguraduhon nga ang mga input box mo-fit sa screen width */
-  input, select, textarea {
+  /* I-ayos ang header navigation aron dili mag-overlap */
+  header, .navbar, .nav-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px;
+  }
+
+  /* Siguraduhon nga ang container dili molapas sa screen */
+  body, html {
+    overflow-x: hidden !important;
     width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box;
   }
 }
 
