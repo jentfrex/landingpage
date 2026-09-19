@@ -590,28 +590,22 @@ header .header-right, .nav-right {
     border-radius: 6px;
 }
 
-/* Responsive Mobile Layout */
 @media (max-width: 768px) {
-    /* Himuon nga fluid ug dili maputol ang mga sections sa mobile */
-    header, 
-    .hero-section, 
-    .submit-project-section, 
-    section {
-        padding: 15px !important;
-        margin: 10px auto !important;
-        max-width: 92% !important;
-        box-sizing: border-box !important;
-        /* Gipagaan ang blur ug shadows para dili mag-lag sa mobile */
-        backdrop-filter: blur(4px) !important;
-        -webkit-backdrop-filter: blur(4px) !important;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3) !important;
-    }
+  /* I-isa-isa ang pagpahimutang sa form fields aron dili mag-side-by-side */
+  form .form-group, 
+  .form-row, 
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 
-    /* Siguraduhon nga ang mga input fields ug buttons dili mo lapas */
-    input, select, textarea, button {
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-    }
+  /* Siguraduhon nga ang mga input box mo-fit sa screen width */
+  input, select, textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
 }
 
 /* ========================================================
