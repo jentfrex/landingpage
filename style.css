@@ -593,92 +593,51 @@ header .header-right, .nav-right {
 /* ==========================================================
    ULTIMATE ABSOLUTE OVERRIDE: HERO IMAGE FIX PARA SA MOBILE
    ========================================================== */
-
 /* ==========================================================
-   ULTIMATE ABSOLUTE OVERRIDE: HERO IMAGE FIX PARA SA MOBILE
-   ========================================================== */
-
-/* ==========================================================
-   FINAL HERO SECTION MOBILE FIX (STACKED & CLEAN LAYOUT)
+   ULTIMATE FORCE OVERRIDE: HERO IMAGE MOBILE FIX
    ========================================================== */
 
 @media screen and (max-width: 768px) {
   
-  /* 1. I-stack ang tibuok hero section aron dili magsapaw ang teksto ug hulagway */
-  .hero, 
-  section.hero, 
-  #hero {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    padding: 30px 15px !important;
-    height: auto !important;
-    min-height: auto !important;
-  }
-
-  /* 2. I-reset ang mga kolum aron mo-full width ang kada usa */
-  .hero .row, 
-  .hero-container,
-  .hero div[class*="col-"] {
+  /* 1. Tangtangon ang tanang pormang pildoras, fixed width, ug absolute positioning sa container */
+  .hero-image-container, 
+  div[style*="border-radius"], 
+  .profile-container,
+  [class*="hero"] div {
     width: 100% !important;
     max-width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    float: none !important;
-  }
-
-  /* 3. Siguraduhing klaro, dako, ug dili magsapaw ang mga teksto sa hero */
-  .hero h1, 
-  .hero-title, 
-  .hero h2 {
-    font-size: 28px !important;
-    line-height: 1.2 !important;
-    position: relative !important;
-    z-index: 3 !important;
-    margin-bottom: 15px !important;
-    display: block !important;
-  }
-
-  .hero p {
-    font-size: 15px !important;
-    line-height: 1.5 !important;
-    position: relative !important;
-    z-index: 3 !important;
-    margin-bottom: 20px !important;
-  }
-
-  /* 4. Ibutang ang hulagway sa saktong dapit sa ubos sa teksto nga walay pormang pildoras */
-  .hero img, 
-  .hero-image-container img, 
-  div[style*="border-radius"] img {
-    width: 100% !important;
-    max-width: 280px !important;
     height: auto !important;
-    max-height: 350px !important;
-    object-fit: cover !important;
-    display: block !important;
+    min-height: unset !important;
+    max-height: unset !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
     margin: 20px auto !important;
-    border-radius: 15px !important;
+    display: block !important;
+    float: none !important;
     position: relative !important;
-    z-index: 2 !important;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5) !important;
-  }
-
-  /* 5. Kuhaon ang mga gubot nga absolute positioning nga maoy hinungdan sa pagsapaw */
-  .hero-image-container, 
-  div[style*="border-radius"] {
-    position: relative !important;
+    transform: none !important;
     top: auto !important;
     left: auto !important;
     right: auto !important;
     bottom: auto !important;
-    transform: none !important;
-    width: 100% !important;
-    background: transparent !important;
+  }
+
+  /* 2. Piliton ang mismong hulagway nga mahimong sakto ang gidak-on ug dili na maipit */
+  .hero-image-container img, 
+  div[style*="border-radius"] img, 
+  .hero img, 
+  section img {
+    width: 90% !important;
+    max-width: 300px !important;
+    height: auto !important;
+    max-height: 380px !important;
+    object-fit: cover !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+    float: none !important;
   }
 }
 
