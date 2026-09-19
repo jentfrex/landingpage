@@ -590,26 +590,67 @@ header .header-right, .nav-right {
     border-radius: 6px;
 }
 
-@media (max-width: 768px) {
-  /* Pakub-an ang dako kaayong text aron dili mo-overflow */
-  h1, .hero-title, .main-title {
-    font-size: 28px !important;
-    line-height: 1.2 !important;
-  }
+/* ==========================================================
+   MOBILE & TABLET RESPONSIVENESS FIX (Dili hilabtan ang uban)
+   ========================================================== */
 
-  /* I-ayos ang header navigation aron dili mag-overlap */
-  header, .navbar, .nav-container {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 10px;
-  }
-
-  /* Siguraduhon nga ang container dili molapas sa screen */
+@media screen and (max-width: 768px) {
+  /* 1. I-prevent ang horizontal overflow ug mag-fit sa screen */
   body, html {
     overflow-x: hidden !important;
     width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 2. Siguraduhon nga ang tanang main containers ug boxes mo-adjust */
+  .hero-container, 
+  .form-container, 
+  .navbar, 
+  header, 
+  footer, 
+  div {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3. I-stack ang mga elements nga nag-side-by-side aron dili ma-cut */
+  .row, .row-flex, .col, header, .nav-container {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    align-items: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* 4. Pakub-an ang mga dagkong text aron dili molapas sa screen */
+  h1 {
+    font-size: 26px !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+  }
+
+  h2 {
+    font-size: 22px !important;
+    text-align: center !important;
+  }
+
+  p, span {
+    font-size: 14px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* 5. I-fix ang mga input fields, forms, ug buttons sa mobile */
+  input, select, textarea, button {
+    width: 90% !important;
+    max-width: 100% !important;
+    margin: 5px auto !important;
+    box-sizing: border-box !important;
   }
 }
+
 
 /* ========================================================
    FIXED PROCESS CARDS & HEADERS STYLING (CSS ONLY)
