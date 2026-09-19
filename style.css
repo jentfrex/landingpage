@@ -591,14 +591,25 @@ header .header-right, .nav-right {
 }
 
 /* ==========================================================
-   I-HIDE ANG HERO IMAGE SA MOBILE VIEW
+   AGRESSIBONG PAG-Papas SA HERO IMAGE SA MOBILE
    ========================================================== */
 @media screen and (max-width: 768px) {
+  /* I-hide ang tanang posibleng klase sa hero image o ang orange container nili */
   .hero img, 
   .hero-image-container, 
-  div[style*="border-radius"] {
+  div[style*="border-radius"], 
+  div[style*="orange"],
+  img[src*="hero"],
+  .profile-container {
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
+}
 
   .hero, section, .main-hero, header + section {
     display: flex !important;
@@ -617,8 +628,6 @@ header .header-right, .nav-right {
     width: 100% !important;
     max-width: 100% !important;
   }
-
-}
 
   /* 3. Pagtangtang sa pormang pildoras o restricted container sa hulagway */
   .hero div[style], section div[style], 
