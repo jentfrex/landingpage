@@ -590,13 +590,51 @@ header .header-right, .nav-right {
     border-radius: 6px;
 }
 
+/* ==========================================================
+   CELINE'S FINAL MOBILE IMAGE OVERRIDE (Fix Aspect Ratio)
+   ========================================================== */
+
 @media screen and (max-width: 768px) {
-  /* Siguraduhon nga ang ginikanan sa Full Name ug Contact Details kay column */
-  form > div, form > .row, form > .form-row, form > div[style*="display"] {
-    display: flex !important;
-    flex-direction: column !important;
+  /* I-target ang container nga naghupot sa hulagway (base sa screenshot) */
+  .hero-image-container, 
+  .profile-picture-wrapper, 
+  div[style*="border-radius: 50px"], /* Ang orange border sa screenshot */
+  .col-md-6 > div {
+    /* I-reset ang fixed height para sa desktop */
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    
+    /* Siguraduhon nga ang container mo-occupy sa full width sa mobile */
     width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    padding: 0 !important;
+    background: none !important; /* Kuhaon ang background sa container kung naa */
   }
+
+  /* I-fix ang mismong img tag aron mo-fit sa container ug ma-center */
+  .hero-image-container img, 
+  .profile-picture-wrapper img, 
+  div[style*="border-radius: 50px"] img {
+    width: 100% !important;
+    max-width: 300px !important; /* Gusto nimo maximum size? I-adjust ni */
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+    object-fit: cover !important;
+    border-radius: 20px !important; /* I-adjust ang roundness kung gusto */
+    box-shadow: none !important; /* O ilisan og moble shadow */
+  }
+
+  /* Kon giputos sa usa ka link tag (<a>) ang hulagway */
+  a.hero-image-container, a.profile-picture-wrapper {
+    display: flex !important;
+    height: auto !important;
+  }
+}
 
   /* I-pilit ang tanang input sa form nga mo-occupy sa tibuok width */
   form input[type="text"], 
@@ -607,7 +645,7 @@ header .header-right, .nav-right {
     margin-bottom: 15px !important;
     display: block !important;
   }
-}
+
 
 /* ========================================================
    FIXED PROCESS CARDS & HEADERS STYLING (CSS ONLY)
