@@ -590,36 +590,37 @@ header .header-right, .nav-right {
     border-radius: 6px;
 }
 
-/* ==========================================================
-   FINAL FIXED MOBILE HERO RESPONSIVE FIX
-   ========================================================== */
 @media screen and (max-width: 768px) {
-  
-  /* 1. I-stack ang tibuok hero section aron mag-ibabaw ang teksto ug sa ubos ang hulagway */
   .hero-section {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    padding: 20px 15px !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
     gap: 20px !important;
+    padding: 20px 15px !important;
+    text-align: center !important;
   }
 
-  /* 2. I-full width ang tibuok content */
   .hero-content {
     width: 100% !important;
     max-width: 100% !important;
   }
 
-  /* 3. Saktohon ang gidak-on sa hero-visual container aron dili mapit-os */
   .hero-visual {
     width: 100% !important;
     max-width: 100% !important;
     display: flex !important;
     justify-content: center !important;
     margin-top: 15px !important;
-    height: auto !important;
   }
+
+  .hero-visual img, #displayImg {
+    width: 100% !important;
+    max-width: 280px !important;
+    height: auto !important;
+    border-radius: 16px !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+}
 
   /* 4. I-porma og tarong ang hulagway (#displayImg) aron dako ug normal ang hitsura */
   .hero-visual img, #displayImg {
@@ -633,7 +634,6 @@ header .header-right, .nav-right {
     display: block !important;
     margin: 0 auto !important;
   }
-}
 
   /* --- 2. FIX SA FORM (I-stack gyud ang Full Name ug Contact Details) --- */
   form, 
