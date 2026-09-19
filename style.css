@@ -590,9 +590,6 @@ header .header-right, .nav-right {
     border-radius: 6px;
 }
 
-   ULTIMATE BULLETPROOF MOBILE HERO & IMAGE FIX
-   ========================================================== */
-
 /* ==========================================================
    I-HIDE ANG HERO IMAGE SA MOBILE VIEW
    ========================================================== */
@@ -602,9 +599,7 @@ header .header-right, .nav-right {
   div[style*="border-radius"] {
     display: none !important;
   }
-}
-  
-  /* 1. I-force ang tibuok hero section ug mga ginikanan niini sa pag-stack */
+
   .hero, section, .main-hero, header + section {
     display: flex !important;
     flex-direction: column !important;
@@ -616,19 +611,14 @@ header .header-right, .nav-right {
     box-sizing: border-box !important;
   }
 
-  /* 2. I-reset ang tanang row ug columns aron mo-full width ug walay maipit */
   .hero .row, .hero [class*="col-"], 
   section .row, section [class*="col-"],
   .row, [class*="col-"] {
     width: 100% !important;
     max-width: 100% !important;
-    flex: 0 0 100% !important;
-    display: block !important;
-    float: none !important;
-    clear: both !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
   }
+
+}
 
   /* 3. Pagtangtang sa pormang pildoras o restricted container sa hulagway */
   .hero div[style], section div[style], 
