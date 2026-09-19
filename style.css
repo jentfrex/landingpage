@@ -591,12 +591,16 @@ header .header-right, .nav-right {
 }
 
 /* ==========================================================
-   ULTIMATE HERO IMAGE FIX (PAG-AYO SA NAIPIT NGA HULAGWAY)
+   ULTIMATE ABSOLUTE OVERRIDE: HERO IMAGE FIX PARA SA MOBILE
    ========================================================== */
 
 @media screen and (max-width: 768px) {
-  
-  /* 1. I-release ang fixed height ug width sa container sa hulagway sa hero section */
+  div h2 {
+    animation: guaranteedTextShine 3s linear infinite !important;
+    text-shadow: 0 0 25px rgba(255, 170, 0, 0.5), 0 0 10px rgba(255, 215, 0, 0.3) !important;
+  }
+
+  /* Ibutang diri ang sakto nga fix para sa hero image nga dili ma-ipit */
   div[style*="border-radius"], 
   .hero-image-container, 
   .profile-container,
@@ -608,28 +612,38 @@ header .header-right, .nav-right {
     min-height: unset !important;
     max-height: unset !important;
     display: block !important;
-    margin: 15px auto !important;
-    padding: 0 !important;
-    background: transparent !important;
     float: none !important;
+    margin: 20px auto !important;
+    padding: 0 10px !important;
+    background: transparent !important;
   }
 
-  /* 2. I-pilit ang mismong img tag nga mobuak sa pormang pildoras ug mahimong saktong hulagway */
+  img, 
   .hero img, 
   .hero-image-container img, 
   div[style*="border-radius"] img,
   section img {
-    width: 90% !important;
+    width: 100% !important;
     max-width: 320px !important;
     height: auto !important;
-    max-height: 400px !important;
+    max-height: 450px !important;
     object-fit: contain !important;
     display: block !important;
-    margin: 20px auto !important;
+    margin: 15px auto !important;
     border-radius: 20px !important;
     float: none !important;
   }
 }
+
+@keyframes guaranteedTextShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
 
 
   /* --- 2. FIX SA FORM (I-stack gyud ang Full Name ug Contact Details) --- */
@@ -833,4 +847,3 @@ div h2 {
         background-position: 200% 50%;
     }
 }
-
