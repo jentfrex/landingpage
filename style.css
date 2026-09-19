@@ -590,32 +590,22 @@ header .header-right, .nav-right {
     border-radius: 6px;
 }
 
-/* ==========================================================
-   CELINE'S TARGETED FORM STACKING FIX (Footer/Form Only)
-   ========================================================== */
-
 @media screen and (max-width: 768px) {
-  /* I-target lang specifically ang form fields aron mag-stack og patindog */
-  form .form-row, 
-  form .form-group, 
-  form div[style*="flex"], 
-  form div[style*="grid"],
-  .footer-form .row,
-  section#contact form div {
+  /* Siguraduhon nga ang ginikanan sa Full Name ug Contact Details kay column */
+  form > div, form > .row, form > .form-row, form > div[style*="display"] {
     display: flex !important;
     flex-direction: column !important;
     width: 100% !important;
-    float: none !important;
   }
 
-  /* Siguraduhon nga ang tanang input, select, ug textarea mo-occupy sa tibuok width */
-  form input, 
-  form select, 
-  form textarea {
+  /* I-pilit ang tanang input sa form nga mo-occupy sa tibuok width */
+  form input[type="text"], 
+  form input[type="email"], 
+  form input {
     width: 100% !important;
     max-width: 100% !important;
-    box-sizing: border-box !important;
-    margin-bottom: 12px !important;
+    margin-bottom: 15px !important;
+    display: block !important;
   }
 }
 
