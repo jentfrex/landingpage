@@ -591,35 +591,39 @@ header .header-right, .nav-right {
 }
 
 /* ==========================================================
-   CELINE'S FINAL MOBILE OVERRIDE FOR FORMS & IMAGES
+   CELINE'S ABSOLUTE HERO OVERRIDE FOR MOBILE
    ========================================================== */
 
 @media screen and (max-width: 768px) {
-  /* 1. Pugson gyud pagpatong ang tanang form row o column sa ibabaw ug ubos */
-  form div, form span, form label, 
-  .form-group, .form-row, .row, .col {
-    display: block !important;
-    width: 100% !important;
-    float: none !important;
-    clear: both !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+  /* 1. Pugson ang tanang header tags sa hero nga mamahimong sakto sa panan-aw */
+  .hero h1, .hero-title, header h1, section h1, div h1 {
+    font-size: 24px !important;
+    line-height: 1.2 !important;
+    letter-spacing: normal !important;
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    text-align: center !important;
   }
 
-  /* 2. Siguraduhon nga ang tanang input fields ug textboxes sakto ang gidak-on */
-  form input, form select, form textarea {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-top: 5px !important;
-    margin-bottom: 15px !important;
-    box-sizing: border-box !important;
-  }
-
-  /* 3. I-fix ang gagmay kaayong mga hulagway aron mo-expand sa mobile */
-  img {
-    max-width: 100% !important;
+  /* 2. Palakkuon ang gamay kaayong hulagway sa hero section */
+  .hero img, .profile-container img, .hero-image img, img[src*="hero"], img.profile {
+    width: 80% !important;
+    max-width: 300px !important;
     height: auto !important;
+    display: block !important;
+    margin: 20px auto !important;
+    float: none !important;
+  }
+
+  /* 3. I-center ug i-fix ang padding sa tibuok hero container */
+  .hero, .hero-section, .banner {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 15px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 }
 
