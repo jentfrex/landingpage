@@ -591,37 +591,64 @@ header .header-right, .nav-right {
 }
 
 /* ==========================================================
-   ANG PINAKADIRETSO UG ULTIMATONG FIX SA HULAGWAY SA MOBILE
+   ULTIMATE MOBILE RESPONSIVE FIX (PERFECT DESKTOP MIRROR)
    ========================================================== */
 
 @media screen and (max-width: 768px) {
-  /* 1. I-release ang tanang gidak-on sa orange border / container sa hulagway */
-  div[style*="border-radius"] {
+  
+  /* --- 1. FIX SA HULAGWAY (Dili na gamay, dili na usab pislit) --- */
+  div[style*="border-radius"], 
+  .hero-image-container, 
+  .profile-container,
+  .col-md-6, 
+  [class*="col-"] {
     width: 100% !important;
     max-width: 100% !important;
-    height: auto !important;
-    min-height: unset !important;
-    max-height: unset !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    padding: 0 !important;
-    margin: 15px auto !important;
-    background: transparent !important;
+    flex: 0 0 100% !important;
+    display: block !important;
+    text-align: center !important;
+    margin: 10px auto !important;
+    padding: 0 15px !important;
   }
 
-  /* 2. I-lock ang hulagway aron dili na mag-ihaw o mag-atang ang hitsura */
-  div[style*="border-radius"] img, 
-  .hero img, 
-  section img {
-    width: auto !important;
-    max-width: 85% !important;
+  /* Siguraduhon nga ang hulagway mobalik sa saktong gidak-on ug dili ma-crop */
+  img, 
+  .hero-image-container img, 
+  div[style*="border-radius"] img {
+    width: 100% !important;
+    max-width: 280px !important; /* Sakto nga gidak-on para sa mobile screen */
     height: auto !important;
-    max-height: 350px !important;
     object-fit: contain !important;
     display: block !important;
-    margin: 0 auto !important;
+    margin: 15px auto !important;
+    border-radius: 15px !important;
+  }
+
+  /* --- 2. FIX SA FORM (I-stack gyud ang Full Name ug Contact Details) --- */
+  form, 
+  .form-container, 
+  form .row, 
+  form div {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  /* Piliton ang matag field nga mo-occupy sa tibuok width ug mag-isa-isa */
+  form .col, 
+  form [class*="col-"], 
+  form > div > div,
+  form input[type="text"], 
+  form input[type="email"], 
+  form input, 
+  form select, 
+  form textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
     float: none !important;
+    clear: both !important;
+    margin-bottom: 15px !important;
+    box-sizing: border-box !important;
   }
 }
 
