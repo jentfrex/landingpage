@@ -591,45 +591,37 @@ header .header-right, .nav-right {
 }
 
 /* ==========================================================
-   FIXED MOBILE FORM & IMAGE RESPONSIVENESS
+   CELINE'S FINAL MOBILE OVERRIDE FOR FORMS & IMAGES
    ========================================================== */
 
 @media screen and (max-width: 768px) {
-  /* 1. I-stack ang Full Name ug Contact Details aron magpatong (vertical) */
-  .form-row, 
-  .form-group-inline, 
-  form div[style*="flex"], 
-  form div[style*="grid"] {
-    display: flex !important;
-    flex-direction: column !important;
+  /* 1. Pugson gyud pagpatong ang tanang form row o column sa ibabaw ug ubos */
+  form div, form span, form label, 
+  .form-group, .form-row, .row, .col {
+    display: block !important;
     width: 100% !important;
+    float: none !important;
+    clear: both !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
-  /* Siguraduhon nga ang duha ka input fieldsmo-occupy sa tibuok width */
-  #Full Name, #Contact Details, 
-  input[name*="name"], input[name*="contact"], 
-  input[type="text"], input[type="email"] {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-bottom: 10px !important;
-  }
-
-  /* 2. I-ayos ang imahe sa unang screenshot aron dili ma-crop sa taas nga box */
-  img, .hero-image, .profile-img-container {
+  /* 2. Siguraduhon nga ang tanang input fields ug textboxes sakto ang gidak-on */
+  form input, form select, form textarea {
+    display: block !important;
     width: 100% !important;
     max-width: 100% !important;
-    height: auto !important;
-    object-fit: cover;
-  }
-
-  /* 3. Dugangan og padding sa tibuok screen aron dili madikit sa daplin ang mga text */
-  body, .container, section {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
+    margin-top: 5px !important;
+    margin-bottom: 15px !important;
     box-sizing: border-box !important;
   }
-}
 
+  /* 3. I-fix ang gagmay kaayong mga hulagway aron mo-expand sa mobile */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
 
 /* ========================================================
    FIXED PROCESS CARDS & HEADERS STYLING (CSS ONLY)
