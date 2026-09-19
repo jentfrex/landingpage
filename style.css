@@ -591,38 +591,37 @@ header .header-right, .nav-right {
 }
 
 /* ==========================================================
-   ULTIMATE MOBILE RESPONSIVE FIX (PERFECT DESKTOP MIRROR)
+   FINAL HERO IMAGE FIX (Nindot na ang form, sakto na gyud ang hulagway)
    ========================================================== */
 
 @media screen and (max-width: 768px) {
   
-  /* --- 1. FIX SA HULAGWAY (Dili na gamay, dili na usab pislit) --- */
-  div[style*="border-radius"], 
-  .hero-image-container, 
-  .profile-container,
-  .col-md-6, 
-  [class*="col-"] {
-    width: 100% !important;
-    max-width: 100% !important;
-    flex: 0 0 100% !important;
-    display: block !important;
-    text-align: center !important;
-    margin: 10px auto !important;
-    padding: 0 15px !important;
-  }
-
-  /* Siguraduhon nga ang hulagway mobalik sa saktong gidak-on ug dili ma-crop */
-  img, 
+  /* 1. I-balik sa saktong hitsura ang container sa hero image */
+  .hero img, 
   .hero-image-container img, 
   div[style*="border-radius"] img {
     width: 100% !important;
-    max-width: 280px !important; /* Sakto nga gidak-on para sa mobile screen */
+    max-width: 100% !important; /* Molapad na siya sa mobile screen */
     height: auto !important;
-    object-fit: contain !important;
+    max-height: 400px !important; /* Dili na ma-usab nga pormang pildoras */
+    object-fit: cover !important;
     display: block !important;
-    margin: 15px auto !important;
-    border-radius: 15px !important;
+    margin: 20px auto !important;
+    border-radius: 20px !important;
   }
+
+  /* 2. Siguraduhon nga ang ginikanan nga div sa hero image dili ma-compress */
+  .hero .col-md-6, 
+  .hero-image-container, 
+  div[style*="border-radius"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
 
   /* --- 2. FIX SA FORM (I-stack gyud ang Full Name ug Contact Details) --- */
   form, 
